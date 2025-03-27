@@ -100,3 +100,5 @@ If you continue to experience issues:
 ## Next Steps
 
 After installation, refer to the [Usage Guide](usage_guide.md) to learn how to use the Breaking Point MCP Agent.
+
+If you plan to use the BP_MCP_Agent with Claude Desktop AI, please refer to the [Claude Integration Guide](claude_integration.md) for detailed instructions on configuring Claude to work with this agent.
