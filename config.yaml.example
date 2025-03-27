@@ -1,0 +1,57 @@
+# Breaking Point MCP Agent Configuration
+
+# API Connection Settings
+api:
+  # Breaking Point system hostname or IP address
+  host: breaking-point.example.com
+  # Request timeout in seconds
+  timeout: 60
+  # Whether to verify SSL certificates
+  verify_ssl: false
+  # Number of retries for failed API calls
+  retries: 3
+  # Delay between retries in seconds
+  retry_delay: 5
+
+# Credentials (storing credentials in the config file is not recommended for production)
+# Instead, use environment variables BP_AGENT_USERNAME and BP_AGENT_PASSWORD
+credentials:
+  username: admin
+  password: password
+
+# Cache Settings
+cache:
+  # Whether to enable caching
+  enabled: true
+  # Cache time-to-live in seconds (1 hour)
+  ttl: 3600
+  # Cache directory
+  dir: ~/.bp_agent/cache
+  # Whether to compress cached results
+  compression: false
+
+# Analyzer Settings
+analyzer:
+  # Default report type (standard, executive, detailed, compliance)
+  default_report_type: standard
+  # Default output format (html, pdf, csv, txt)
+  default_output_format: html
+  # Default directory for reports and charts
+  default_output_dir: ./reports
+  # Directories to search for analyzer plugins
+  plugin_dirs:
+    - ./plugins
+    - ~/.bp_agent/plugins
+
+# Logging Settings
+logging:
+  # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  level: INFO
+  # Log file path
+  file: ~/.bp_agent/logs/agent.log
+  # Maximum log file size in bytes (10 MB)
+  max_size: 10485760
+  # Number of backup log files to keep
+  backup_count: 5
+  # Whether to log to console
+  console: true
